@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*Al abrir el archivo dashboard ahi se tiene la aplicacion vue(diseno) y de ahi para abrir y usar las rutas se usaran las herramientas*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::resource('task','TaskController',['except'=>'show']);
